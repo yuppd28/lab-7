@@ -1,0 +1,22 @@
+from numpy import *
+import matplotlib.pyplot as plt
+import pylab
+
+with open("gamlet.txt", "r") as file:
+    data = file.read().replace('\n', '')
+    (narrative,interrogative,exclamatory,three dots) = 0
+    for char in data:
+        if char == "!":
+            exclamatory = exclamatory + 1
+        elif char == "…":
+            three dots = three dots + 1
+        elif char == ".":
+            narrative = narrative + 1
+        elif char == "?":
+            interrogative = interrogative + 1
+ydata = sentences
+xdata = ("Розповідні", "Питальні", "Окличні", "Три крапки")
+
+pylab.bar (xdata, ydata)
+pylab.savefig('sentences.png', dpi=200)
+pylab.show()
