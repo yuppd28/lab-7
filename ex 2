@@ -1,0 +1,17 @@
+from array import *
+import pylab
+
+text=input('Your text:')
+
+frequency=['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+letters=list(letters_str)
+L=len(letters)
+for i in range(L):
+    elem=letters[i]
+    fr=text.count(elem)
+    frequency.append(fr)
+xdata=letters
+ydata=frequency
+pylab.bar (xdata, ydata)
+pylab.savefig('number2.png', dpi=200)
+pylab.show()
