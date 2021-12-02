@@ -1,0 +1,10 @@
+from numpy import *
+import matplotlib.pyplot as plt
+
+x=linspace(0,10)
+y=-x**cos(5*x)
+
+plt.plot(x,y,'-c')
+plt.title('Plot v2')
+plt.savefig('Ex1.png', dpi=200)
+plt.show()
